@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Projects | Sufiyan Naseem</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header__logo-link">
+      <img src="assets/images/logo.png" alt="Logo" class="header__logo">
+    </a>
+    <nav class="header__nav">
+      <a href="index.html" class="header__link">Home</a>
+      <a href="art.html" class="header__link">Art</a>
+      <a href="gallery.html" class="header__link">Gallery</a>
+    </nav>
+  </header>
+  <main>
+    <section class="art-gallery">
+      <h1 class="art-gallery__heading">My art projects through the years</h1>
+      <div class="art-gallery__grid">
+        <article class="art-project">
+          <div class="art-project__image-wrap art-project__trigger" tabindex="0" role="button">
+            <img src="assets/images/art-2.png" alt="Stranger" class="art-project__image">
+          </div>
+          <h2 class="art-project__title art-project__trigger" tabindex="0" role="button">Stranger</h2>
+          <p class="art-project__date art-project__trigger" tabindex="0" role="button">December 2017</p>
+          <p class="art-project__description art-project__trigger" tabindex="0" role="button">We had a project to do in arts class and I finished early so I decided to draw rest of someones face.</p>
+        </article>
+        <article class="art-project">
+          <div class="art-project__image-wrap art-project__trigger" tabindex="0" role="button">
+            <img src="assets/images/art-3.png" alt="Paul Cézanne" class="art-project__image">
+          </div>
+          <h2 class="art-project__title art-project__trigger" tabindex="0" role="button">Paul Cézanne</h2>
+          <p class="art-project__date art-project__trigger" tabindex="0" role="button">February 2018</p>
+          <p class="art-project__description art-project__trigger" tabindex="0" role="button">Had to do an arts project in class, decided to do on Paul Cézanne who was a famous painter.</p>
+        </article>
+        <article class="art-project">
+          <div class="art-project__image-wrap art-project__trigger" tabindex="0" role="button">
+            <img src="assets/images/art-1.png" alt="Eren Yeager" class="art-project__image">
+          </div>
+          <h2 class="art-project__title art-project__trigger" tabindex="0" role="button">Eren Yeager</h2>
+          <p class="art-project__date art-project__trigger" tabindex="0" role="button">May 2020</p>
+          <p class="art-project__description art-project__trigger" tabindex="0" role="button">Used to be a big fan of Attack on Titan because of its interesting philosophies. Decided to draw him to test my skills.</p>
+        </article>
+        <article class="art-project">
+          <div class="art-project__image-wrap art-project__trigger" tabindex="0" role="button">
+            <img src="assets/images/art-4.png" alt="Godzilla" class="art-project__image">
+          </div>
+          <h2 class="art-project__title art-project__trigger" tabindex="0" role="button">Godzilla</h2>
+          <p class="art-project__date art-project__trigger" tabindex="0" role="button">May 2025</p>
+          <p class="art-project__description art-project__trigger" tabindex="0" role="button">I actually drew godzilla a lot, specifically this version (2014 godzilla). Decided to draw him again couple months ago. Went quite nicely!</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <div id="art-modal" class="art-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Art project details">
+    <div class="art-modal__backdrop"></div>
+    <button type="button" class="art-modal__nav art-modal__nav--prev" aria-label="Previous project">
+      <svg class="art-modal__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <button type="button" class="art-modal__nav art-modal__nav--next" aria-label="Next project">
+      <svg class="art-modal__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+    <div class="art-modal__content">
+      <button type="button" class="art-modal__close" aria-label="Close">&times;</button>
+      <img src="" alt="" class="art-modal__image">
+      <h2 class="art-modal__title"></h2>
+      <p class="art-modal__date"></p>
+      <p class="art-modal__description"></p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="theme-toggle">
+      <button type="button" class="theme-toggle__btn" data-theme="light" aria-label="Light mode" title="Light mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme="dark" aria-label="Dark mode" title="Dark mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+    <p class="footer__copyright">© 2026 Sufiyan Naseem. I A A D C. All rights reserved.</p>
+  </footer>
+  <script src="js/theme.js"></script>
+  <script src="js/art.js"></script>
+</body>
+</html>

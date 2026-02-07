@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Sufiyan Naseem</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header__logo-link">
+      <img src="assets/images/logo.png" alt="Logo" class="header__logo">
+    </a>
+    <nav class="header__nav">
+      <a href="index.html" class="header__link">Home</a>
+      <a href="art.html" class="header__link">Art</a>
+      <a href="gallery.html" class="header__link">Gallery</a>
+    </nav>
+  </header>
+  <main>
+    <section class="gallery-section">
+      <h1 class="gallery__heading">Gallery</h1>
+      <div class="gallery__grid">
+        <article class="gallery-photo">
+          <div class="gallery-photo__image-wrap gallery-photo__trigger" tabindex="0" role="button">
+            <img src="assets/images/gallery-1.png" alt="Portrait against the sky" class="gallery-photo__image">
+          </div>
+          <p class="gallery-photo__description gallery-photo__trigger" tabindex="0" role="button">Was playing basketball with my friends near 2023 then my brother decided to take a picture. Ever since then I've been using this as my PFP in moments where I want people to see me but at the same time I want to stay anonymous lol...</p>
+        </article>
+        <article class="gallery-photo">
+          <div class="gallery-photo__image-wrap gallery-photo__trigger" tabindex="0" role="button">
+            <img src="assets/images/gallery-2.png" alt="Event audience" class="gallery-photo__image">
+          </div>
+          <p class="gallery-photo__description gallery-photo__trigger" tabindex="0" role="button">This was during the opening ceremony of ConUHacks 2026. I am sitting watching my phone alonside my partners and my brother is doing something for the camera.</p>
+        </article>
+        <article class="gallery-photo">
+          <div class="gallery-photo__image-wrap gallery-photo__trigger" tabindex="0" role="button">
+            <img src="assets/images/gallery-3.png" alt="Coding with AI talk" class="gallery-photo__image">
+          </div>
+          <p class="gallery-photo__description gallery-photo__trigger" tabindex="0" role="button">This was a Git workshop that happened during ConUHacks 2026.</p>
+        </article>
+        <article class="gallery-photo">
+          <div class="gallery-photo__image-wrap gallery-photo__trigger" tabindex="0" role="button">
+            <img src="assets/images/gallery-4.png" alt="Co-working space" class="gallery-photo__image">
+          </div>
+          <p class="gallery-photo__description gallery-photo__trigger" tabindex="0" role="button">Me and my partners had found a place to work on our project and someone took a picture of us from above.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <div id="gallery-modal" class="gallery-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo details">
+    <div class="gallery-modal__backdrop"></div>
+    <button type="button" class="gallery-modal__nav gallery-modal__nav--prev" aria-label="Previous photo">
+      <svg class="gallery-modal__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <button type="button" class="gallery-modal__nav gallery-modal__nav--next" aria-label="Next photo">
+      <svg class="gallery-modal__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+    <div class="gallery-modal__content">
+      <button type="button" class="gallery-modal__close" aria-label="Close">&times;</button>
+      <img src="" alt="" class="gallery-modal__image">
+      <p class="gallery-modal__description"></p>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="theme-toggle">
+      <button type="button" class="theme-toggle__btn" data-theme="light" aria-label="Light mode" title="Light mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme="dark" aria-label="Dark mode" title="Dark mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+    <p class="footer__copyright">© 2026 Sufiyan Naseem. I A A D C. All rights reserved.</p>
+  </footer>
+  <script src="js/theme.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

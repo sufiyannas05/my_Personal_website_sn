@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sufiyan Naseem</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html" class="header__logo-link">
+      <img src="assets/images/logo.png" alt="Logo" class="header__logo">
+    </a>
+    <nav class="header__nav">
+      <a href="#about" class="header__link">About</a>
+      <a href="#projects" class="header__link">Projects</a>
+      <a href="#art" class="header__link">Art</a>
+      <a href="#gallery" class="header__link">Gallery</a>
+      <a href="#activities" class="header__link">Activities</a>
+      <a href="#contact" class="header__link">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="hero__name">Sufiyan Naseem</h1>
+      <p class="hero__tagline">Electrical Engineering Student at</p>
+      <p class="hero__tagline">Concordia University</p>
+      <p class="hero__tagline">I   A   A   D   C   💫</p>
+      <img src="assets/images/hero-portrait.png" alt="" class="hero__image"> 
+    </section>
+    <section id="about" class="about">
+      <h2 class="about__heading">Who am I?</h2>
+      <p class="about__paragraph">I'm Sufiyan. I'm someone who's passionate about programming and building stuffs. I'm currently working on two projects with my friends which are going to be posted once done. </p>
+      <p class="about__paragraph">Outside of that, I've been focusing on my journey where I've been working on my social skills. I'm also quite a philosophy fan because of one of my friends, I tend to enjoy things that makes me think. I also enjoy rock climbing, been doing that for couple of months. I love chess, art and also I really love guinea pigs.</p>
+      <p class="about__paragraph">Feel free to contact me if you either want to make something together, teach me something or talk about something with me. I'm always open for conversations!</p>
+    </section>
+    <section id="projects" class="projects">
+      <h2 class="projects__heading">Projects</h2>
+      <div class="projects__block">
+        <h3 class="projects__subheading">Google Homepage</h3>
+        <div class="projects__row">
+          <img src="assets/images/google-homepage.png" alt="Google Homepage project" class="projects__image projects__image--zoomable" tabindex="0" role="button">
+          <article class="projects__entry">
+            <p class="projects__title">June 2025</p>
+            <p class="projects__description">This was my first ever "project" that I made by watching coding sloth's video!</p>
+            <a href="https://github.com/sufiyannas05/google-homepage-project" class="projects__button" target="_blank" rel="noopener noreferrer">Repository</a>
+          </article>
+        </div>
+      </div>
+      <div class="projects__block">
+        <h3 class="projects__subheading">Syllabus AI</h3>
+        <div class="projects__row">
+          <img src="assets/images/syllabus-ai.png" alt="Syllabus AI - syllabus to calendar with AI" class="projects__image projects__image--zoomable" tabindex="0" role="button">
+          <article class="projects__entry">
+            <p class="projects__title">January 24-25 2026</p>
+            <p class="projects__description">It's a project that I made with my friends for ConUHacks 2026. It's a web application that summarize important informations from your course outline and can directly sync it with google calendar. Uses AI parsing to extract the important informations.</p>
+            <a href="https://github.com/sufiyannas05/digital-secretary" class="projects__button" target="_blank" rel="noopener noreferrer">Repository</a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <div id="image-zoom-modal" class="image-zoom-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Zoomed image">
+      <div class="image-zoom-modal__backdrop"></div>
+      <div class="image-zoom-modal__content">
+        <button type="button" class="image-zoom-modal__close" aria-label="Close">&times;</button>
+        <img src="" alt="" class="image-zoom-modal__image">
+      </div>
+    </div>
+    <section id="art" class="art">
+      <h2 class="art__heading">Art</h2>
+      <p class="art__text">I also draw in my spare time. Check it out!</p>
+      <a href="art.html" class="art__button">Art Projects</a>
+    </section>
+    <section id="gallery" class="gallery">
+      <h2 class="gallery__heading">Gallery</h2>
+      <p class="gallery__text">Couple of pictures of me and my friends</p>
+      <a href="gallery.html" class="gallery__button">Gallery</a>
+    </section>
+    <section id="activities" class="activities">
+      <h2 class="activities__heading">Activities</h2>
+      <ul class="activities__list">
+        <li class="activities__item">Volunteering at Dawson College in the MSA - 2023</li>
+      </ul>
+    </section>
+    <section id="contact" class="contact">
+      <h2 class="contact__heading">Contacts</h2>
+      <div class="contact__links">
+        <a href="mailto:sufiyannsm061@gmail.com" class="contact__link">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          sufiyannsm061@gmail.com
+        </a>
+        <a href="https://github.com/sufiyannas05" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          GitHub
+        </a>
+        <a href="https://devpost.com/sufiyannas05" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <svg class="contact__icon contact__icon--filled" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6.002 1.61 0 12.004 6.002 22.39h11.996L24 12.004 17.998 1.61zm1.593 4.084h3.947c3.605 0 6.276 1.695 6.276 6.31 0 4.436 -3.21 6.302 -6.456 6.302H7.595zm2.517 2.449v7.714h1.241c2.646 0 3.862 -1.55 3.862 -3.861 0.009 -2.569 -1.096 -3.853 -3.767 -3.853Z" fill="currentColor"/>
+          </svg>
+          Devpost
+        </a>
+        <a href="https://linkedin.com/in/sufiyannass" class="contact__link" target="_blank" rel="noopener noreferrer">
+          <svg class="contact__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="theme-toggle">
+      <button type="button" class="theme-toggle__btn" data-theme="light" aria-label="Light mode" title="Light mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme="dark" aria-label="Dark mode" title="Dark mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+    </div>
+    <p class="footer__copyright">© 2026 Sufiyan Naseem. All rights reserved.</p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
