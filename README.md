@@ -6,3 +6,7 @@ Hey this is my personal website 👋
 - Javascript
 
 I'm not entirely sure what else I'm supposed to be saying here not going to lie...
+
+feel free to check out my website! 
+
+sufiyannaseem.com
