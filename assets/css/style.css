@@ -285,6 +285,17 @@ section[id] {
   margin-bottom: 2rem;
 }
 
+.projects__more {
+  text-align: center;
+  color: #666;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+body.dark .projects__more {
+  color: #999;
+}
+
 .projects__row {
   display: flex;
   align-items: flex-start;
