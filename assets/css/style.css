@@ -817,7 +817,7 @@ body.dark .art-modal__description {
   padding: 2rem;
 }
 
-/* IAADC easter egg – invisible trigger, navigates to iaadc.html */
+/* IAADC easter egg – invisible trigger, navigates to gaIlery.html */
 .easter-egg-trigger {
   position: absolute;
   bottom: 0.5rem;
