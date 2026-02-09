@@ -152,9 +152,11 @@
   <script src="assets/js/theme.js"></script>
   <script type="module">
     import { inject } from "https://esm.sh/@vercel/analytics";
-    import { injectSpeedInsights } from "https://esm.sh/@vercel/speed-insights";
     inject();
-    injectSpeedInsights();
   </script>
+  <script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>
