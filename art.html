@@ -13,9 +13,12 @@
 </head>
 <body>
   <header class="header">
-    <a href="index.html" class="header__logo-link">
-      <img src="assets/assets/images/logo.png" alt="Logo" class="header__logo">
-    </a>
+    <div class="header__logo-wrap">
+      <a href="index.html" class="header__logo-link">
+        <img src="assets/assets/images/logo.png" alt="Logo" class="header__logo">
+      </a>
+      <span class="easter-egg-trigger" id="easter-egg-trigger" aria-hidden="true" tabindex="-1" role="button"></span>
+    </div>
     <button type="button" class="header__menu-btn" aria-label="Toggle menu" aria-expanded="false">
       <span class="header__menu-icon"></span>
     </button>
@@ -85,8 +88,8 @@
     </div>
   </div>
   <footer class="footer">
-    <!-- IAADC easter egg: invisible trigger navigates to gaIlery.html -->
-    <a href="gaIlery.html" class="easter-egg-trigger" aria-hidden="true" tabindex="-1"></a>
+    <!-- IAADC easter egg hint: 1 click shows teaser message -->
+    <span class="easter-egg-hint-trigger" id="easter-egg-hint-trigger" aria-hidden="true" tabindex="-1" role="button"></span>
     <div class="footer__divider"></div>
     <div class="theme-toggle">
       <button type="button" class="theme-toggle__btn" data-theme="light" aria-label="Light mode" title="Light mode">

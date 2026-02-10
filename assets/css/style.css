@@ -42,6 +42,11 @@ body {
   z-index: 100;
 }
 
+.header__logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .header__logo-link {
   text-decoration: none;
   display: block;
@@ -152,8 +157,10 @@ body.dark .header__menu-icon::after {
     gap: 0;
   }
 
-  .header__logo-link {
+  .header__logo-wrap {
     margin-right: auto;
+  }
+  .header__logo-link {
     min-width: 40px;
   }
 
@@ -817,11 +824,12 @@ body.dark .art-modal__description {
   padding: 2rem;
 }
 
-/* IAADC easter egg – invisible trigger, navigates to gaIlery.html */
-.easter-egg-trigger {
+/* Easter egg hint trigger – bottom-left, 1 click shows teaser */
+.easter-egg-hint-trigger {
+  display: block;
   position: absolute;
   bottom: 0.5rem;
-  right: 0.5rem;
+  left: 0.5rem;
   width: 28px;
   height: 28px;
   padding: 0;
@@ -829,11 +837,52 @@ body.dark .art-modal__description {
   background: var(--page-bg);
   border: none;
   cursor: default;
-  text-indent: -9999px;
   overflow: hidden;
   font-size: 0;
   color: transparent;
   z-index: 1;
+}
+.easter-egg-hint-trigger:hover {
+  background: var(--page-bg);
+  cursor: default;
+}
+.easter-egg-hint-trigger:focus {
+  outline: 1px dotted rgba(128, 128, 128, 0.4);
+  outline-offset: 2px;
+}
+
+/* Easter egg hint overlay – black screen, message centered */
+.easter-egg-hint-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.easter-egg-hint-overlay__message {
+  color: #fff;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 2rem;
+  max-width: 20rem;
+}
+
+/* IAADC easter egg – 5 clicks in header next to logo, navigates to gaIlery.html */
+.easter-egg-trigger {
+  display: block;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  background: var(--page-bg);
+  border: none;
+  cursor: default;
+  overflow: hidden;
+  font-size: 0;
+  color: transparent;
 }
 .easter-egg-trigger:hover {
   background: var(--page-bg);

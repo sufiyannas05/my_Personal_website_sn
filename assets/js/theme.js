@@ -108,3 +108,65 @@
     initMenu();
   }
 })();
+
+// Easter egg hint: 1 click → black screen, message; disabled after first press
+(function () {
+  var used = false;
+
+  function init() {
+    var trigger = document.getElementById('easter-egg-hint-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (used) return;
+      used = true;
+      trigger.style.pointerEvents = 'none';
+      var overlay = document.createElement('div');
+      overlay.className = 'easter-egg-hint-overlay';
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.innerHTML = '<p class="easter-egg-hint-overlay__message">Press on it five times :)</p>';
+      document.body.appendChild(overlay);
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      setTimeout(function () {
+        overlay.remove();
+      }, 3200);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+// Easter egg: 5 clicks required to navigate to gaIlery.html
+(function () {
+  var CLICKS_REQUIRED = 5;
+  var RESET_MS = 1500;
+  var count = 0;
+  var resetTimer = null;
+
+  function init() {
+    var trigger = document.getElementById('easter-egg-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      count++;
+      clearTimeout(resetTimer);
+      if (count >= CLICKS_REQUIRED) {
+        window.location.href = 'gaIlery.html';
+      } else {
+        resetTimer = setTimeout(function () {
+          count = 0;
+        }, RESET_MS);
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
