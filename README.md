@@ -1,7 +1,5 @@
 Hey this is my personal website 👋
 
-> **Note:** The `google28ce043bdd68125e.html` file in the project root is required for Google Search Console verification. Do not remove or rename it.
-
 **Tech Stack:**
 - HTML
 - CSS
