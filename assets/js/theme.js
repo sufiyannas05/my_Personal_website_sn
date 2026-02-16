@@ -97,8 +97,33 @@
       link.addEventListener('click', closeMenu);
     });
 
+    var dropdownTriggers = document.querySelectorAll('.header__dropdown-trigger');
+    dropdownTriggers.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          var dropdown = btn.closest('.header__dropdown');
+          dropdown.classList.toggle('header__dropdown--open');
+          btn.setAttribute('aria-expanded', dropdown.classList.contains('header__dropdown--open'));
+        }
+      });
+    });
+    var dropdownLinks = document.querySelectorAll('.header__dropdown-menu .header__link');
+    dropdownLinks.forEach(function (link) {
+      link.addEventListener('click', function () {
+        var dropdown = link.closest('.header__dropdown');
+        if (dropdown) dropdown.classList.remove('header__dropdown--open');
+        closeMenu();
+      });
+    });
+
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 768) closeMenu();
+      if (window.innerWidth > 768) {
+        closeMenu();
+        document.querySelectorAll('.header__dropdown').forEach(function (d) {
+          d.classList.remove('header__dropdown--open');
+        });
+      }
     });
   }
 

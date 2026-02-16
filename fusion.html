@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion 360 Projects — Sufiyan Naseem</title>
+  <meta name="description" content="Fusion 360 3D design and CAD projects by Sufiyan Naseem.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="assets/site.webmanifest">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo-wrap">
+      <a href="index.html" class="header__logo-link">
+        <img src="assets/images/logo.png" alt="Logo" class="header__logo">
+      </a>
+      <span class="easter-egg-trigger" id="easter-egg-trigger" aria-hidden="true" tabindex="-1" role="button"></span>
+    </div>
+    <button type="button" class="header__menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <span class="header__menu-icon"></span>
+    </button>
+    <nav class="header__nav" aria-label="Main navigation">
+      <a href="index.html" class="header__link">Home</a>
+      <div class="header__dropdown">
+        <button type="button" class="header__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Projects</button>
+        <ul class="header__dropdown-menu">
+          <li><a href="index.html#projects" class="header__link">Programming Projects</a></li>
+          <li><a href="fusion.html" class="header__link">Fusion 360 Projects</a></li>
+        </ul>
+      </div>
+      <a href="art.html" class="header__link">Art</a>
+      <a href="gallery.html" class="header__link">Gallery</a>
+    </nav>
+  </header>
+  <main>
+    <section class="art-gallery">
+      <h1 class="art-gallery__heading">Fusion 360 Projects</h1>
+      <p class="art__text" style="margin-bottom: 2rem;">3D design and CAD projects created in Fusion 360. Drag to orbit, scroll to zoom. Click or press View larger to see in full screen.</p>
+      <div class="art-gallery__grid art-gallery__grid--fusion">
+        <article class="art-project fusion-project" data-src="assets/models/lego-block.glb" data-title="Lego Block">
+          <div class="fusion-viewer">
+            <model-viewer src="assets/models/lego-block.glb" alt="Lego block 3D model" camera-controls auto-rotate ar shadow-intensity="1"></model-viewer>
+          </div>
+          <h2 class="art-project__title">Lego Block</h2>
+          <button type="button" class="fusion-viewer-btn" aria-label="View Lego Block in full screen">View larger</button>
+        </article>
+        <article class="art-project fusion-project" data-src="assets/models/chess-piece.glb" data-title="Chess Piece">
+          <div class="fusion-viewer">
+            <model-viewer src="assets/models/chess-piece.glb" alt="Chess piece 3D model" camera-controls auto-rotate ar shadow-intensity="1"></model-viewer>
+          </div>
+          <h2 class="art-project__title">Chess Piece</h2>
+          <button type="button" class="fusion-viewer-btn" aria-label="View Chess Piece in full screen">View larger</button>
+        </article>
+      </div>
+      <p class="projects__more">More projects to come...</p>
+    </section>
+  </main>
+  <div id="fusion-modal" class="fusion-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="3D model view">
+    <div class="fusion-modal__backdrop"></div>
+    <div class="fusion-modal__content">
+      <button type="button" class="fusion-modal__close" aria-label="Close">&times;</button>
+      <model-viewer id="fusion-modal-viewer" camera-controls auto-rotate ar shadow-intensity="1" style="width:100%;height:100%"></model-viewer>
+      <h2 class="fusion-modal__title" id="fusion-modal-title"></h2>
+    </div>
+  </div>
+  <footer class="footer">
+    <span class="easter-egg-hint-trigger" id="easter-egg-hint-trigger" aria-hidden="true" tabindex="-1" role="button"></span>
+    <div class="footer__divider"></div>
+    <div class="theme-toggle">
+      <button type="button" class="theme-toggle__btn" data-theme="light" aria-label="Light mode" title="Light mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="5"/>
+          <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme="dark" aria-label="Dark mode" title="Dark mode">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button type="button" class="theme-toggle__btn" data-theme="system" aria-label="System mode" title="System mode – follows your device settings">
+        <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+        </svg>
+      </button>
+    </div>
+    <p class="footer__copyright">© 2026 Sufiyan Naseem. All rights reserved.</p>
+  </footer>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/fusion.js"></script>
+  <script type="module">
+    import { inject } from "https://esm.sh/@vercel/analytics";
+    import { injectSpeedInsights } from "https://esm.sh/@vercel/speed-insights";
+    inject();
+    injectSpeedInsights();
+  </script>
+</body>
+</html>

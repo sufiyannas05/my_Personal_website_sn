@@ -28,7 +28,13 @@
     </button>
     <nav class="header__nav" aria-label="Main navigation">
       <a href="#about" class="header__link">About</a>
-      <a href="#projects" class="header__link">Projects</a>
+      <div class="header__dropdown">
+        <button type="button" class="header__dropdown-trigger" aria-expanded="false" aria-haspopup="true">Projects</button>
+        <ul class="header__dropdown-menu">
+          <li><a href="index.html#projects" class="header__link">Programming Projects</a></li>
+          <li><a href="fusion.html" class="header__link">Fusion 360 Projects</a></li>
+        </ul>
+      </div>
       <a href="#art" class="header__link">Art</a>
       <a href="#gallery" class="header__link">Gallery</a>
       <a href="#activities" class="header__link">Activities</a>
